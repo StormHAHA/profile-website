@@ -1,3 +1,4 @@
+/*------------------------GENERAL--------------------------------*/
 *{
     padding: 0;
     margin: 0;
@@ -18,51 +19,44 @@ li {
     max-width: 1440px;
 
 }
+/*------------------------NAVBAR--------------------------------*/
 .nav-bar {
     min-height: 80px;
     display: flex;
     justify-content: space-between;
     padding: 14px;
     margin-left: 8px;
-    margin-right: 8px;
-    
+    margin-right: 8px;   
 }
 #logo img {
     display: inline-block;
     transform: translateY(25%);
     width: 150px;
 }
-#nav-btn1 {
+#nav-btn {
     color: white;
     font-family: 'Nunito';
-    font-size: 37px;
-}
-#nav-btn2 {
-    color: white;
-    font-family: 'Nunito';
-    font-size: 37px;
-}
-ul li {
-    display: inline-block;
+    font-size: 2em;
     margin-left: 32px;
     margin-right: 32px;
 }
 
-#txt1:hover {
+ul li {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+#nav-btn:hover {
     transition: 0.5s;
     color: #00ee00;
 
 }
 .ul {
     margin: 0 auto;
-}
-#txt2:hover{
-    transition-duration: 0.5ms;
-    color: #00ee00;
+    text-align: center;
 }
 
-
-#nav-btn1:after {
+#nav-btn:after {
     content: "";
     position: absolute;
     background: rgb(7, 190, 0);
@@ -73,28 +67,11 @@ ul li {
     bottom: -3px;
     transition: 0.3s;
 }
-#nav-btn2:after {
-    content: "";
-    position: absolute;
-    background:#00ee00;
-    height: 4px;
-    border-radius: 10px;
-    width: 0%;
-    left: 0;
-    bottom: -3px;
-    transition: 0.3s;
-}
 
-#nav-btn1:hover:after {
+#nav-btn:hover:after {
     width: 100%;
 }
-
-
-
-#nav-btn2:hover:after {
-    width: 100%;
-}
-  
+/*------------------------BACKGROUND--------------------------------*/
 .header-bg:after {
     position: absolute;
     content: '';
@@ -112,6 +89,9 @@ ul li {
     height: 100%;
     z-index: -1;
 }
+
+
+/*------------------------CARDS--------------------------------*/
 .card {
     background-color: rgb(34, 32, 32);
     font-family: 'Nunito';
@@ -164,14 +144,6 @@ ul li {
     font-size: larger;
 }
 
-.heading-text {
-    color: #00ee00;
-    font-family: "Nunito";
-    text-align: center;
-    margin: 300px 0 300px 0;
-    line-height: 500%;
-}
-
 
 .card-img img {
 
@@ -195,7 +167,17 @@ ul li {
     padding-top: 30px;
     margin: 0 auto;
 }
-/*-------------------------------------------------------- card2 */
+
+/*-----------------------HEADINGTEXT--------------------------*/
+.heading-text {
+    color: #00ee00;
+    font-family: "Nunito";
+    text-align: center;
+    margin: 300px 0 300px 0;
+    line-height: 500%;
+}
+
+/*----------------------------FOOTER--------------------------------------------- */
 .footer {
     position: absolute;
     width: 100%;
@@ -281,6 +263,13 @@ ul li {
     .card-container{
         max-width: 750px;
     }
+    #nav-btn {
+        font-size: 1.5em;
+    }
+    #logo img {
+        
+        display: none;
+    }
 }
 
 @media (max-width: 768px){
@@ -289,6 +278,10 @@ ul li {
     }
     .card-container{
         max-width: none;
+    }
+    #nav-btn {
+        margin-left: 8px;
+        margin-right: 8px;
     }
 
 }
